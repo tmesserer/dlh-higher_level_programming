@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-digit_collection = ""
-
-
 def print_last_digit(number):
-    global digit_collection
-    digit_collection += str(number % 10)
+    digit_collection = (abs(number) % 10)
     print(digit_collection, end="")
     return digit_collection
