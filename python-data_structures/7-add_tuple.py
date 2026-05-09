@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-def print_matrix_integer(matrix=[[]]):
-    for part in matrix:
-        for i, number in enumerate(part):
-            if i != len(part)-1:
-                print("{:d}".format(number), end=" ")
-            else:
-                print("{:d}".format(number), end="")
-        print()
+def add_tuple(tuple_a=(), tuple_b=()):
+    while len(tuple_a) < 2:
+        tuple_a = tuple_a + (0, )
+    while len(tuple_b) < 2:
+        tuple_b = tuple_b + (0, )
+    new_tuple = (tuple_a[0] + tuple_b[0], tuple_a[1] + tuple_b[1])
+    return (new_tuple)
