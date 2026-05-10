@@ -2,6 +2,8 @@
 def best_score(a_dictionary):
     if a_dictionary is None or not isinstance(a_dictionary, dict):
         return None
+    elif a_dictionary == {}:
+        return None
     else:
         best_score_key = ""
         best_score_value = 0
