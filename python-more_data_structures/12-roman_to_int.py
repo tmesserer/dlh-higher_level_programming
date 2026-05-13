@@ -3,7 +3,7 @@ def roman_to_int(roman_string):
     result = 0
     new_list = []
     previous_variable = "ZZZ"
-    if not roman_string:
+    if not isinstance(roman_string, str):
         return result
     else:
         dict = {"ZZZ": 9999, "I": 1, "V": 5, "X": 10,
