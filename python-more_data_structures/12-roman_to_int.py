@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
     if not roman_string:
         return result
     else:
-        dict = {"ZZZ": 9999, "I": 1, "V": 5, "X": 10, \n
+        dict = {"ZZZ": 9999, "I": 1, "V": 5, "X": 10,
                 "L": 50, "C": 100, "D": 500, "M": 1000}
         for i in roman_string:
             if dict.get(i) <= dict.get(previous_variable):
