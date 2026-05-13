@@ -18,5 +18,4 @@ def roman_to_int(roman_string):
                 previous_variable = i
         for x in range(0, len(new_list)):
             result += new_list[x]
-        print(new_list)
         return result
