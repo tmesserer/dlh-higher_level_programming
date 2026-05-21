@@ -10,7 +10,8 @@ class Square:
     def __init__(self, size=0):
         """
         Args:
-            size (int): Gives the size of the square, aka how big it is. Defaults to 0.
+            size (int): Gives the size of the square, aka how big it is.
+            Defaults to 0.
 
         Raises:
             TypeError: size has to be an integer
@@ -19,5 +20,5 @@ class Square:
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
-            raise ValueError("size must be >= 0") 
+            raise ValueError("size must be >= 0")
         self.__size = size
