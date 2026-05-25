@@ -80,7 +80,7 @@ class Rectangle:
     def print(self):
         """This method prints the rectangle with the character '#'"""
         if self.__height == 0 or self.__width == 0:
-            return("")
+            return ""
         for i in range(0, self.__height):
             print("#" * self.__width)
 
