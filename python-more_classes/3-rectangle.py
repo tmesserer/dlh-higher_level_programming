@@ -79,12 +79,16 @@ class Rectangle:
 
     def print(self):
         """This method prints the rectangle with the character '#'"""
+        if self.__height == 0 or self.__width == 0:
+            return("")
         for i in range(0, self.__height):
             print("#" * self.__width)
 
     def __str__(self):
         """This method prints the rectangle with the character '#'"""
         string = ""
+        if self.__height == 0 or self.__width == 0:
+            return string
         for i in range(0, self.__height - 1):
             string += "#"*self.__width+"\n"
         string += "#"*self.__width
