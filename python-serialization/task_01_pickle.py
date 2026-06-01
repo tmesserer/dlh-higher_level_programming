@@ -22,12 +22,15 @@ class CustomObject:
     def display(self):
         """displays all attributes in dictionary format"""
         for key, value in self.__dict__.items():
-            print("{}: {}".format(key, value))
+            print("{}: {}".format(key.replace("_", " ").title(), value))
 
     def serialize(self, filename):
         """serializes its attributes in the attribute filename"""
-        with open(filename, "wb") as f:
-            pickle.dump(self, f)
+        try:
+            with open(filename, "wb") as f:
+                pickle.dump(self, f)
+        except Exception:
+            return None
 
     @classmethod
     def deserialize(cls, filename):
@@ -35,5 +38,8 @@ class CustomObject:
         Using the pickle module, it will load and return an instance of
         the CustomObject from the provided filename.
         """
-        with open(filename, "rb") as f:
-            return pickle.load(f)
+        try:
+            with open(filename, "rb") as f:
+                return pickle.load(f)
+        except Exception:
+            return None
