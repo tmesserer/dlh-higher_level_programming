@@ -1,5 +1,17 @@
 #!/usr/bin/python3
+"""
+This module provides a function
+that prints pascal's triangle.
+Up to the n-th level.
+"""
+
+
 def pascal_triangle(n):
+    """
+    prints out pascal's triangle.
+    Arguments:
+        n: defines the level to which the triangle is built.
+    """
     if n <= 0:
         return []
     last_row = [1]
